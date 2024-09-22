@@ -99,7 +99,7 @@ $(document).ready(function() {
 
   $("#executeBtn").attr('disabled', false);
   $("#executeBtn").click(function() {
-    $('#executeBtn').html("Please wait ... processing your code");
+    $('#executeBtn').html("请稍候...处理您的代码中");
     $('#executeBtn').attr('disabled', true);
     $("#pyOutputPane").hide();
 

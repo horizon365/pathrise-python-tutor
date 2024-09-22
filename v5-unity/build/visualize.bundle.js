@@ -1089,7 +1089,7 @@ var ExecutionVisualizer = /** @class */ (function () {
                 msg = "Instruction limit reached";
             }
             else {
-                msg = "Program terminated";
+                msg = "程序中止";
             }
         }
         this.navControls.setVcrControls(msg, isFirstInstr, isLastInstr);
@@ -3237,7 +3237,7 @@ var ProgramOutputBox = /** @class */ (function () {
         this.owner = owner;
         this.domRoot = domRoot;
         var outputsHTML = '<div id="progOutputs">\
-         <div id="printOutputDocs">Print output (drag lower right corner to resize)</div>\n\
+         <div id="printOutputDocs">打印输出（拖动右下角调整大小）</div>\n\
          <textarea id="pyStdout" cols="40" rows="5" wrap="off" readonly></textarea>\
        </div>';
         this.domRoot.append(outputsHTML);
@@ -3305,18 +3305,18 @@ var CodeDisplay = /** @class */ (function () {
         var codeDisplayHTML = '<div id="codeDisplayDiv">\
          <div id="langDisplayDiv"></div>\
          <div id="pyCodeOutputDiv"/>\
-         <div id="editCodeLinkDiv"><a id="editBtn">Edit this code</a>\
+         <div id="editCodeLinkDiv"><a id="editBtn">编辑此代码</a>\
          </div>\
          <div id="legendDiv"/>\
-         <div id="codeFooterDocs">Click a line of code to set a breakpoint; use the Back and Forward buttons to jump there.</div>\
+         <div id="codeFooterDocs">单击一行代码以设置断点；使用“后退”和“前进”按钮跳转到那里。</div>\
        </div>';
         this.domRoot.append(codeDisplayHTML);
         if (this.owner.params.embeddedMode) {
             this.domRoot.find('#editCodeLinkDiv').css('font-size', '10pt');
         }
         this.domRoot.find('#legendDiv')
-            .append('<svg id="prevLegendArrowSVG"/> line that has just executed')
-            .append('<p style="margin-top: 4px"><svg id="curLegendArrowSVG"/> next line to execute</p>');
+            .append('<svg id="prevLegendArrowSVG"/> 刚刚执行的行')
+            .append('<p style="margin-top: 4px"><svg id="curLegendArrowSVG"/>将要执行的下一行</p>');
         this.domRootD3.select('svg#prevLegendArrowSVG')
             .append('polygon')
             .attr('points', exports.SVG_ARROW_POLYGON)
@@ -3649,11 +3649,11 @@ var NavigationController = /** @class */ (function () {
                      <div id="executionSlider"/>\
                      <div id="executionSliderFooter"/>\
                      <div id="vcrControls">\
-                       <button id="jmpFirstInstr", type="button">&lt;&lt; First</button>\
-                       <button id="jmpStepBack", type="button">&lt; Back</button>\
+                       <button id="jmpFirstInstr", type="button">&lt;&lt; 第一</button>\
+                       <button id="jmpStepBack", type="button">&lt; 后退</button>\
                        <span id="curInstr">Step ? of ?</span>\
-                       <button id="jmpStepFwd", type="button">Forward &gt;</button>\
-                       <button id="jmpLastInstr", type="button">Last &gt;&gt;</button>\
+                       <button id="jmpStepFwd", type="button">前进 &gt;</button>\
+                       <button id="jmpLastInstr", type="button">最后 &gt;&gt;</button>\
                      </div>\
                      <div id="rawUserInputDiv">\
                        <span id="userInputPromptStr"/>\
@@ -22269,7 +22269,7 @@ var AbstractBaseFrontend = /** @class */ (function () {
     };
     AbstractBaseFrontend.prototype.startExecutingCode = function (startingInstruction) {
         if (startingInstruction === void 0) { startingInstruction = 0; }
-        $('#executeBtn').html("Please wait ... executing (takes up to 10 seconds)");
+        $('#executeBtn').html("请稍候……正在执行（最多需要 10 秒钟）。");
         $('#executeBtn').attr('disabled', true);
         this.isExecutingCode = true;
     };
@@ -23656,7 +23656,7 @@ var OptFrontendSharedSessions = /** @class */ (function (_super) {
         pytutor_1.assert(exports.TogetherJS);
         if (togetherjsInUrl) { // kinda gross global
             $("#ssDiv,#surveyHeader").hide(); // hide ASAP!
-            $("#togetherjsStatus").html("Please wait ... loading live help chat session");
+            $("#togetherjsStatus").html("请稍候……正在加载实时帮助聊天会话。");
         }
         // clear your name from the cache every time to prevent privacy leaks
         if (opt_frontend_common_1.supports_html5_storage()) {
@@ -24137,7 +24137,7 @@ var OptFrontendSharedSessions = /** @class */ (function (_super) {
     };
     OptFrontendSharedSessions.prototype.startSharedSession = function (wantsPublicHelp) {
         $("#ssDiv,#surveyHeader").hide(); // hide ASAP!
-        $("#togetherjsStatus").html("Please wait ... loading live help chat session");
+        $("#togetherjsStatus").html("请稍候……正在加载实时帮助聊天会话。");
         exports.TogetherJS();
         // TODO: unify everything into 1 boolean
         this.wantsPublicHelp = wantsPublicHelp;

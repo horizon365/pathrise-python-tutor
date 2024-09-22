@@ -396,7 +396,7 @@ function initTogetherJS() {
 
   if (togetherjsInUrl) {
     $("#ssDiv").hide(); // hide ASAP!
-    $("#togetherjsStatus").html("Please wait ... loading shared session");
+    $("#togetherjsStatus").html("请稍候...加载共享会话中");
   }
 
 
@@ -670,7 +670,7 @@ function TogetherjsCloseHandler() {
 
 function startSharedSession() {
   $("#ssDiv").hide(); // hide ASAP!
-  $("#togetherjsStatus").html("Please wait ... loading shared session");
+  $("#togetherjsStatus").html("请稍候...加载共享会话中");
   TogetherJS();
 }
 
@@ -1381,7 +1381,7 @@ function handleUncaughtExceptionFunc(trace) {
 }
 
 function startExecutingCode() {
-  $('#executeBtn').html("Please wait ... executing (takes up to 10 seconds)");
+  $('#executeBtn').html("请稍候……正在执行（最多需要 10 秒钟）。");
   $('#executeBtn').attr('disabled', true);
   isExecutingCode = true; // nasty global
 }

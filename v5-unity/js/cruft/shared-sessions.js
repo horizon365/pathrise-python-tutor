@@ -90,7 +90,7 @@ function initTogetherJS() {
 
   if (togetherjsInUrl) {
     $("#ssDiv").hide(); // hide ASAP!
-    $("#togetherjsStatus").html("Please wait ... loading shared session");
+    $("#togetherjsStatus").html("请稍候...加载共享会话中");
   }
 
 
@@ -355,7 +355,7 @@ var TogetherjsCloseHandler = undefined; // need to override in frontend
 
 var startSharedSession = function() {
   $("#ssDiv").hide(); // hide ASAP!
-  $("#togetherjsStatus").html("Please wait ... loading shared session");
+  $("#togetherjsStatus").html("请稍候...加载共享会话中");
   TogetherJS();
 }
 

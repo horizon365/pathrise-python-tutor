@@ -48,7 +48,7 @@ var activateSyntaxErrorSurvey = true; // true;
 function startSharedSession() { // override default
   $("#ssDiv,#surveyHeader").hide(); // hide ASAP!
   $("#adHeader").hide(); // hide ASAP!
-  $("#togetherjsStatus").html("Please wait ... loading shared session");
+  $("#togetherjsStatus").html("请稍候...加载共享会话中");
   TogetherJS();
 }
 

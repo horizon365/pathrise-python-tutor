@@ -279,7 +279,7 @@ function finishQuestionsInit(questionsDat) {
       }
     }
 
-    $('#executeBtn').html("Please wait ... processing your code");
+    $('#executeBtn').html("请稍候...处理您的代码中");
     $('#executeBtn').attr('disabled', true);
     $("#pyOutputPane").hide();
 
@@ -306,7 +306,7 @@ function finishQuestionsInit(questionsDat) {
 
 
   $("#submitBtn").click(function() {
-    $('#submitBtn').html("Please wait ... submitting ...");
+    $('#submitBtn').html("请稍后 ... 提交中 ...");
     $('#submitBtn').attr('disabled', true);
 
     resetTestResults(); // prepare for a new fresh set of test results

@@ -149,7 +149,7 @@ $(document).ready(function() {
 
       var nCodeLines = inputCod.split('\n').length + 2;
 
-      $('#executeBtn').html("Please wait ... processing your code");
+      $('#executeBtn').html("请稍候...处理您的代码中");
       $('#executeBtn').attr('disabled', true);
       $("#pyOutputPane,#gradingPane").hide();
       $("#embedLinkDiv").hide();
